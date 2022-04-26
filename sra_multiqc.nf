@@ -69,9 +69,10 @@ process fastqc {
   container "https://depot.galaxyproject.org/singularity/fastqc:0.11.9--0"
   input:
     path fastq
+    val accession
   output:
-    path "${fastq.getSimpleName()}_fastqc.html"
-    path "${fastq.getSimpleName()}_fastqc.zip", emit: zipped
+    path "${accession}*_fastqc.html"
+    path "${accession}*_fastqc.zip", emit: zipped
   script:
     """
     fastqc ${fastq}
@@ -83,13 +84,14 @@ process multiqc {
    container "https://depot.galaxyproject.org/singularity/multiqc%3A1.9--py_1"
   input:
   path report_files
+  val accession
 
   output:
-  path "multiqc_report.html"
+  path "${accession}_multiqc_report.html"
 
   script:
   """
-  multiqc .
+  multiqc . -n ${accession}_multiqc_report.html
   """
 }
 
@@ -100,9 +102,9 @@ workflow {
   sraresult = prefetch(params.accession)
   fastqs = fastqdump(sraresult)
   // pipe the fastqs channel into fastp
-  fastpout = fastp(fastqs, params.accession)
-  qcied = fastqc(fastqs.flatten())
+  fastpout = fastp(fastqs.flatten(), params.accession)
+  all_fastqs = fastqs.concat(fastpout.fastq_cut)
+  qcied = fastqc(all_fastqs, params.accession)
   multiqc_input_channel = fastpout.fastpreport.concat(qcied.zipped)
-  multiqc_input_channel.view()
-  multiqc(multiqc_input_channel.collect())
+  multiqc(multiqc_input_channel.collect(), params.accession)
 }
