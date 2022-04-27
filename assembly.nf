@@ -74,7 +74,7 @@ workflow {
   if (params.with_quastref){
     reference = channel.fromPath(params.with_quastref)
     quast_ref(vout.velvetcontigs, reference)
-  } else{
+  } else {
   quast(vout.velvetcontigs)}
 
 }
