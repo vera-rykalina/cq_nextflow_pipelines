@@ -64,9 +64,12 @@ container "https://depot.galaxyproject.org/singularity/quast%3A5.0.2--py37pl5321
   """
 }
 
+/*process spades{
+
+}
+*/
 
 workflow {
-
   fastqchannel=inchannel = channel.fromPath("${params.indir}/*.fastq").collect()
   fastqchannel.view()
   vout = velvet(fastqchannel, params.hashlen)
@@ -76,5 +79,4 @@ workflow {
     quast_ref(vout.velvetcontigs, reference)
   } else {
   quast(vout.velvetcontigs)}
-
 }
