@@ -2,6 +2,7 @@ nextflow.enable.dsl = 2
 
 params.hashlen = 51
 params.outdir = "results"
+ params.indir = null
 
 process velvet{
 publishDir "${params.outdir}", mode: "copy", overwrite: true
@@ -31,11 +32,10 @@ container "https://depot.galaxyproject.org/singularity/velvet:1.2.10--h7132678_5
 
 }
 
- params.indir = null
 
 workflow {
 
-  fastqchannel=inchannel = channel.fromPath("${params.indir}*.fastq").collect()
+  fastqchannel=inchannel = channel.fromPath("${params.indir}/*.fastq").collect()
   fastqchannel.view()
   velvet(fastqchannel, params.hashlen)
 
