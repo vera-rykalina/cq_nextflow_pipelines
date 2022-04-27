@@ -3,6 +3,7 @@ nextflow.enable.dsl = 2
 params.hashlen = 51
 params.outdir = "results"
 params.indir = null
+params.with_quastref = false
 
 process velvet{
 publishDir "${params.outdir}", mode: "copy", overwrite: true
@@ -28,6 +29,7 @@ container "https://depot.galaxyproject.org/singularity/velvet:1.2.10--h7132678_5
   """
   velveth velvetdir ${hashlen} -fastq -short ${fastq}
   velvetg velvetdir
+
   """
   }
 }
@@ -38,11 +40,27 @@ container "https://depot.galaxyproject.org/singularity/quast%3A5.0.2--py37pl5321
   input:
   path infile
   output:
-  path "out.txt"
+  path "quast_results"
   script:
 
   """
-  echo bla > out.txt
+  quast ${infile}
+  """
+}
+
+
+process quast_ref {
+publishDir "${params.outdir}", mode: "copy", overwrite: true
+container "https://depot.galaxyproject.org/singularity/quast%3A5.0.2--py37pl5321h09c1ff4_7"
+  input:
+  path infile
+  path ref
+  output:
+  path "quast_results"
+  script:
+
+  """
+  quast ${infile} -r ${ref}
   """
 }
 
@@ -53,6 +71,10 @@ workflow {
   fastqchannel.view()
   vout = velvet(fastqchannel, params.hashlen)
   vout.velvetcontigs.view()
-  quast(vout.velvetcontigs)
+  if (params.with_quastref){
+    reference = channel.fromPath(params.with_quastref)
+    quast_ref(vout.velvetcontigs, reference)
+  } else{
+  quast(vout.velvetcontigs)}
 
 }
