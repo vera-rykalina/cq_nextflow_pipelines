@@ -93,7 +93,7 @@ container "https://depot.galaxyproject.org/singularity/quast%3A5.0.2--py37pl5321
 
 
 workflow {
-  fastqchannel=inchannel = channel.fromPath("${params.indir}/*.fastq").collect()
+  fastqchannel = channel.fromPath("${params.indir}/*.fastq").collect()
   //fastqchannel.view()
   vout = velvet(fastqchannel, params.hashlen)
   sout=spades(fastqchannel)
