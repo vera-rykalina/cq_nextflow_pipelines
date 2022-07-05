@@ -1,0 +1,18 @@
+- name: Complete wordcount
+  command: nextflow examples/wordcount_complete.nf --infile data/hat_full_of_sky.txt --outdir /tmp/counttest --word you
+  files:
+    - path: "/tmp/counttest/wordcount"
+      should_exist: true
+      contains:
+        - "6"
+      md5sum: 9ae0ea9e3c9c6e1b9b6252c8395efdc1
+  stderr:
+    must_not_contain: 
+      - "Error executing process"
+      - "WARN"
+- name: Missing infile
+  command: nextflow examples/wordcount_complete.nf --infile IDONOTEXIST --outdir /tmp/counttest --word you
+  exit_code: 1
+  stdout:
+    contains:
+      - "Input file IDONOTEXIST does not exist"
