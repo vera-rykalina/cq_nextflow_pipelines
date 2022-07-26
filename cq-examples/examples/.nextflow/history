@@ -1,0 +1,38 @@
+2022-04-19 11:08:47	-	naughty_coulomb	-	303c597f110b958ce9add0c6fff8f8a2	4410d753-a74e-49c3-a108-578fea0e5a15	nextflow wordcount_minimal.nf
+2022-04-19 11:09:37	-	berserk_coulomb	-	303c597f110b958ce9add0c6fff8f8a2	d2d4fe80-ae09-4bc6-a0d9-c71c58d44698	nextflow wordcount_minimal.nf
+2022-04-19 11:11:20	-	admiring_ptolemy	-	303c597f110b958ce9add0c6fff8f8a2	30f5cf80-268c-4028-82ff-ca880ebb99ce	nextflow wordcount_minimal.nf
+2022-04-19 11:13:20	-	golden_turing	-	57c7abb33f5946d79facebeeaac9642c	14a9bc52-6291-45f8-a89d-2bfc66a91a3a	nextflow wordcount_minimal.nf
+2022-04-19 11:14:28	-	pensive_swartz	-	57c7abb33f5946d79facebeeaac9642c	84722432-9b8e-42be-8da8-b3d112f26325	nextflow wordcount_minimal.nf
+2022-04-19 11:16:37	-	intergalactic_wiles	-	92c63d759ac10f284231d8d222382b5b	c5fc7656-f7bf-4631-9e45-d29cebcb77ee	nextflow wordcount_minimal.nf
+2022-04-19 11:20:50	-	high_yonath	-	e5b41743ce3b7c3b6e8dff5a9a9df549	1b2be882-2b26-4cd5-9d57-1a7f8c190efc	nextflow wordcount_minimal.nf
+2022-04-19 11:22:56	-	tender_booth	-	b661f37424b740981006d14c51f4ebf9	ee03f92a-1eea-4e17-ba20-3cc826adfa79	nextflow wordcount_minimal.nf
+2022-04-19 11:25:04	-	intergalactic_shannon	-	92c63d759ac10f284231d8d222382b5b	686d6fa5-498b-46e7-94da-87ac21987d51	nextflow wordcount_minimal.nf
+2022-04-19 11:33:54	-	silly_boyd	-	fde1013e3d14d5bcacc645ccb221c346	63412693-cce6-46c1-8f13-bcb324be1022	nextflow wordcount_minimal.nf
+2022-04-19 12:34:53	-	lonely_lavoisier	-	fde1013e3d14d5bcacc645ccb221c346	5256f0a2-baac-4387-9be4-6e3be952efc3	nextflow wordcount_minimal.nf
+2022-04-19 12:36:41	-	elegant_pare	-	fde1013e3d14d5bcacc645ccb221c346	49454251-d55a-43d7-83e2-f3f89d3bf566	nextflow wordcount_minimal.nf
+2022-04-19 13:06:08	-	wise_turing	-	fde1013e3d14d5bcacc645ccb221c346	0ead7fbc-0940-471d-ba2a-df0ea8a806a2	nextflow wordcount_minimal.nf
+2022-04-19 16:26:08	-	deadly_brahmagupta	-	fde1013e3d14d5bcacc645ccb221c346	8119f9a4-d924-49f0-9b9a-240cbfdfbdd0	nextflow wordcount_minimal.nf
+2022-04-19 16:28:36	7.5s	tiny_ramanujan	OK	fde1013e3d14d5bcacc645ccb221c346	c817b3ee-ed9f-4241-90f3-414a20afd00e	nextflow wordcount_minimal.nf
+2022-04-24 18:19:23	6.7s	romantic_woese	ERR	fc5e71237d305bc01c7d4249d1dc59ae	6385de1a-2f3f-4d8d-b61f-8bf2082d463d	nextflow run tutorial_example.nf
+2022-04-24 18:21:32	4s	voluminous_mandelbrot	OK	50a4a0ffd737b2b189345956dbf69e0f	ea47627a-309f-4cef-9f6c-7e299a3cba8f	nextflow run tutorial_example.nf
+2022-04-24 18:25:24	2.9s	intergalactic_cajal	OK	50a4a0ffd737b2b189345956dbf69e0f	f2187242-3b54-4587-ae83-645a9e35283f	nextflow run tutorial_example.nf
+2022-04-24 18:25:55	2.7s	ridiculous_legentil	OK	50a4a0ffd737b2b189345956dbf69e0f	f2187242-3b54-4587-ae83-645a9e35283f	nextflow run tutorial_example.nf -resume
+2022-04-24 18:36:35	2.8s	lonely_nightingale	OK	2c33e141daffc452283f783e52c32342	f2187242-3b54-4587-ae83-645a9e35283f	nextflow run tutorial_example.nf -resume
+2022-04-24 18:37:19	2s	prickly_williams	OK	2c33e141daffc452283f783e52c32342	d349a25d-b693-4321-99f7-a8a88641145d	nextflow run tutorial_example.nf --str 'Vera Rykalina'
+2022-04-24 19:43:53	6.7s	prickly_snyder	OK	2c33e141daffc452283f783e52c32342	d26f98a3-2bec-4beb-b8a5-ac5dff8aa74b	nextflow uniprot_download.nf
+2022-04-24 19:47:15	1.3s	agitated_lovelace	ERR	15c10c0b1352f39176c94ea8e006c6d8	79bd2648-083d-4b0b-829b-ab1a37afccba	nextflow uniprot.nf
+2022-04-24 19:48:05	-	nice_wing	-	e6bed404294fb87524b331e32250d119	68d79695-482c-4045-a17f-427d00c41bf6	nextflow uniprot.nf
+2022-04-24 19:53:27	-	big_legentil	-	6b715f439dc0798dcc5f04cce06c284c	3a92e63f-4214-444c-b100-9f1d49e8eb42	nextflow run uniprot.nf
+2022-04-24 19:55:02	-	boring_liskov	-	f0ea2105acad2f1007dd3abcc5c714e9	9e8ff7c3-e802-407f-867f-01d66925a41b	nextflow run uniprot.nf
+2022-04-24 20:01:21	-	wise_hopper	-	81adb9ba80a95fcf95b0695812031d47	c65b2d67-1780-4e5b-9740-03712ba71de3	nextflow run uniprot.nf
+2022-04-24 20:01:40	-	sharp_torricelli	-	81adb9ba80a95fcf95b0695812031d47	e1190e02-24b7-4a6b-ae00-cfe51c5ba664	nextflow uniprot.nf
+2022-04-24 20:06:55	2.4s	fabulous_ritchie	ERR	dc3dff797c927d343fa2e5fc990c63ca	45810e35-7202-4218-bdc5-6932b81743d4	nextflow run uniprot.nf
+2022-04-24 20:08:46	2.7s	reverent_wozniak	OK	3eb25a72debbd0e89d6eb47ee2549b35	5c3a41e2-5e2f-4e79-969b-d160d2bf4f72	nextflow run uniprot.nf
+2022-04-25 20:17:50	5.9s	compassionate_woese	OK	3eb25a72debbd0e89d6eb47ee2549b35	db806270-3a6d-40cf-ae40-0299afdd558f	nextflow uniprot.nf
+2022-04-25 20:19:08	2.1s	determined_nightingale	OK	3eb25a72debbd0e89d6eb47ee2549b35	1f64b70b-9bca-4fb7-8d77-21e8d5fd78b1	nextflow uniprot.nf
+2022-04-25 21:16:55	6.2s	lonely_dubinsky	OK	3eb25a72debbd0e89d6eb47ee2549b35	04a75632-5328-41f9-ba7b-a51f2b3b3296	nextflow uniprot.nf
+2022-04-25 21:17:56	2.1s	backstabbing_marconi	OK	3eb25a72debbd0e89d6eb47ee2549b35	d066ccd3-106b-4d20-9efa-63e6617d7565	nextflow uniprot.nf
+2022-04-25 21:33:04	1.6s	cranky_sanger	OK	3eb25a72debbd0e89d6eb47ee2549b35	6fa71437-b1f4-46c8-933b-cd76b0009609	nextflow uniprot_download.nf
+2022-04-25 21:41:38	1.7s	serene_montalcini	OK	3eb25a72debbd0e89d6eb47ee2549b35	2b8cd9cf-50e8-4c83-ad55-237f7b173e29	nextflow uniprot_download.nf
+2022-04-25 21:42:37	2.6s	ridiculous_dubinsky	OK	3eb25a72debbd0e89d6eb47ee2549b35	d1f99da4-89d0-4725-999e-085cf4e77111	nextflow uniprot_download.nf
+2022-04-25 21:44:12	4.4s	nauseous_gautier	OK	4062ea27a0e3b560b58a78b80321716b	a924c19a-5c4b-47f2-8fa4-1c801964d4f1	nextflow uniprot_download.nf
